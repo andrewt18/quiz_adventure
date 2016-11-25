@@ -1,6 +1,6 @@
 # An anomaly in time
 
-
+from time import sleep
 health = 6
 
 def deathseq():
@@ -22,6 +22,7 @@ def pasture():
 
                                            """)
     print("You are in an open pasture with bag,")
+    sleep(2)
     print("a bag of wine and cheese.")
     item = input("Wine or Cheese?: ")
     if item.lower() == "wine":
@@ -41,13 +42,15 @@ def mountain():
 
     
     print("You have moved onwards to a rocky mountain,")
+    sleep(2)
     print("You are certain there cannot be anything worse")
     item2 = input("Wine or Cheese?: ")
     if item2.lower() == "wine":
         print("You start to drink, you drink to much. You have gained drunk")
-        print("You stumble, as a rock harms you")
-        health = health - 1
-    elif item2.lower() == "cheese":
+    sleep(2)
+    print("You stumble, as a rock harms you")
+    health = health - 1
+    if item2.lower() == "cheese":
         print("Mould has got to you, you violently regergetate")
         health = health - 2
 
@@ -57,6 +60,7 @@ def mountain():
 def desert():
     global health
     print("You are parched yet you know that your health will fall,")
+    sleep(2)
     print("yet if you take cheese you will dehydrate")
     item3 = input("Wine or Cheese?: ")
     if item3.lower() == "wine":
@@ -96,6 +100,7 @@ def fortress():
         print("\n"*4)
         print("RIP, Howard the duck")
         print("No more mister nice Duck!")
+        print("\n"*4)
     volcano()
     deathseq()
 
@@ -131,9 +136,13 @@ def Hotel():
 def victory():
     global health
     print("now... you ... have... won!")
+    sleep(1)
     print("...........................")
+    sleep(1)
     print("...........................")
+    sleep(1)
     print("actually, no. you lose")
+    sleep(1)
     quit()
 
 
